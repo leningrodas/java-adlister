@@ -35,7 +35,7 @@ public class pizzaOrder extends HttpServlet {
         }
 
 
-//        enhanced for loop:
+//        enhanced for loop:1
 //        for (String topping : toppings) {
 //System.out.println(topping);
 
