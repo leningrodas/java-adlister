@@ -16,7 +16,10 @@ public class BeanTest {
 
         quote qt = new quote();
         qt.setId(1234567);
-
+        qt.setAuthor(at);
+        qt.getAuthor().getFirstName();
+        qt.getContent();
+        qt.getAuthor().getLastName();
         qt.setContent("yosemite is a great national park");
         qt.setContent("irelands was awesome");
         qt.setContent("spain wass cool");
@@ -38,7 +41,7 @@ public class BeanTest {
 
         albums album = new albums();
         album.setAlbumName("2014 forest hills drive");
-        album.getId(1L);
+//        album.getId(1L);
         album.setArtist("J.Cole");
         album.setGenre("hip hop");
         album.setReleaseDate(2014);
