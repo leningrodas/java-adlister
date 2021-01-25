@@ -13,7 +13,7 @@
 </head>
 <body>
 <c:forEach var="ad" items="${ads}">
-    <div class="product">
+    <div class="ad">
         <p>${ad.id}</p>
         <h2>${ad.title}</h2>
         <p>${ad.userId}</p>

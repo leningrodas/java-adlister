@@ -10,6 +10,7 @@ public class ViewAddsListServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+       req.setAttribute("ads", DaoFactory.getAdsDao().all());
         req.getRequestDispatcher("/ads/index.jsp").forward(req,resp);
     }
 
