@@ -9,7 +9,7 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/login.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -22,8 +22,9 @@ public class LoginServlet extends HttpServlet {
         if (validAttempt && username.equals("admin")) {
 //            admin path- the person who is logged in is an admin
             session.setAttribute("isAdmin", true);
-            response.sendRedirect("/admin"); // will be linked to a servlet
-        } else if (validAttempt && username.equals("user")) {
+            // will be linked to a servlet
+            response.sendRedirect("/admin");
+        } else if (validAttempt) {
             // this is the user path - a regula joe smcho login in
             session.setAttribute("isAdmin", false);
             response.sendRedirect("/profile");
